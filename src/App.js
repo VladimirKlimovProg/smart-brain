@@ -7,6 +7,7 @@ import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
+import Modal from "./components/Modal/Modal";
 import "./App.css";
 
 const particlesOptions = {
@@ -25,8 +26,8 @@ const intitialState = {
   input: "",
   imageUrl: "",
   boxes: [],
-  route: "signin",
-  isSignedIn: false,
+  route: "home",
+  isSignedIn: true,
   user: {
     id: "",
     name: "",
@@ -108,7 +109,7 @@ class App extends Component {
 
   onRouteChange = route => {
     if (route === "signout") {
-      this.setState(intitialState);
+      return this.setState(intitialState);
     } else if (route === "home") {
       this.setState({ isSignedIn: true });
     }
