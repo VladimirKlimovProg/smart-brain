@@ -44,7 +44,7 @@ class ProfileIcon extends React.Component {
             }}
           >
             <DropdownItem onClick={this.props.toggleModal}>
-              View Profiler
+              View Profile
             </DropdownItem>
             <DropdownItem onClick={() => this.props.onRouteChange("signout")}>
               Sign Out
