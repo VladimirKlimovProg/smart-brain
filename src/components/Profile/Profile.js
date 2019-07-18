@@ -29,7 +29,7 @@ class Profile extends React.Component {
 
   onProfileUpdate = data => {
     fetch(
-      `https://damp-bastion-62894.herokuapp.com/profile/${this.props.user.id}`,
+      `https://mighty-harbor-84263.herokuapp.com/profile/${this.props.user.id}`,
       {
         method: "post",
         headers: {
