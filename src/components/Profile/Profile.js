@@ -29,7 +29,9 @@ class Profile extends React.Component {
 
   onProfileUpdate = data => {
     fetch(
-      `https://mighty-harbor-84263.herokuapp.com/profile/${this.props.user.id}`,
+      `https://smartrecognitionserver.herokuapp.com/profile/${
+        this.props.user.id
+      }`,
       {
         method: "post",
         headers: {

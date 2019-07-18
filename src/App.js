@@ -49,7 +49,7 @@ class App extends Component {
   componentDidMount() {
     const token = window.sessionStorage.getItem("token");
     if (token) {
-      fetch("https://mighty-harbor-84263.herokuapp.com/signin", {
+      fetch("https://smartrecognitionserver.herokuapp.com/signin", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -60,7 +60,7 @@ class App extends Component {
         .then(data => {
           if (data && data.id) {
             fetch(
-              `https://mighty-harbor-84263.herokuapp.com/profile/${data.id}`,
+              `https://smartrecognitionserver.herokuapp.com/profile/${data.id}`,
               {
                 method: "get",
                 headers: {
@@ -126,7 +126,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://mighty-harbor-84263.herokuapp.com/imageurl", {
+    fetch("https://smartrecognitionserver.herokuapp.com/imageurl", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -139,7 +139,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("https://mighty-harbor-84263.herokuapp.com/image", {
+          fetch("https://smartrecognitionserver.herokuapp.com/image", {
             method: "put",
             headers: {
               "Content-Type": "application/json",
