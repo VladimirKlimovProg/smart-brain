@@ -1,4 +1,5 @@
 import React from "react";
+import profileImage from "./profile.jpg";
 import {
   Dropdown,
   DropdownToggle,
@@ -30,8 +31,8 @@ class ProfileIcon extends React.Component {
             aria-expanded={this.state.dropdownOpen}
           >
             <img
-              src="http://tachyons.io/img/logo.jpg"
-              className="br-100 ba h3 w3 dib"
+              src={profileImage}
+              className="br-100 ba h3 w3 dib f3 pointer"
               alt="avatar"
             />
           </DropdownToggle>

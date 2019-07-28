@@ -1,5 +1,6 @@
 import React from "react";
 import "./Profile.css";
+import profileImage from "./profile.jpg";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -58,11 +59,7 @@ class Profile extends React.Component {
         <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center bg-white">
           <main className="pa3 black-80 w-80">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <img
-                src="http://tachyons.io/img/logo.jpg"
-                className="h3 w3"
-                alt="avatar"
-              />
+              <img src={profileImage} className="h3 w3" alt="avatar" />
               <div className="modal-close" onClick={this.props.toggleModal}>
                 &times;
               </div>
